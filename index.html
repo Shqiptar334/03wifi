@@ -69,6 +69,7 @@
             background-color: white;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: none; /* Initially hidden */
         }
         iframe {
             width: 100%;
@@ -163,14 +164,24 @@
         </section>
     </div>
 
-    <!-- Speedtest Section -->
+    <!-- Speedtest Button and Section -->
     <div class="speedtest-container">
         <h2>Test je Internet Snelheid</h2>
         <iframe src="https://fast.com" title="Internet Speed Test"></iframe>
     </div>
 
+    <div style="text-align: center; margin-top: 20px;">
+        <button onclick="showSpeedTest()">Start Speedtest</button>
+    </div>
+
     <footer>
         <p>&copy; 2025 WiFi Helpline - Alle rechten voorbehouden</p>
     </footer>
+
+    <script>
+        function showSpeedTest() {
+            document.querySelector('.speedtest-container').style.display = 'block'; // Show speedtest
+        }
+    </script>
 </body>
 </html>
