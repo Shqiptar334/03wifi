@@ -69,7 +69,7 @@
             background-color: white;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            display: none; /* Initially hidden */
+            display: none;
         }
         iframe {
             width: 100%;
@@ -98,6 +98,17 @@
             cursor: pointer;
         }
         .review-form button:hover {
+            background-color: #005bb5;
+        }
+        .speedtest-btn {
+            background-color: #0073e6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .speedtest-btn:hover {
             background-color: #005bb5;
         }
     </style>
@@ -135,10 +146,8 @@
             <h2>Klanten Reviews</h2>
             <p>Lees wat onze klanten zeggen over onze WiFi-diensten!</p>
 
-            <!-- Review Button -->
-            <button onclick="document.getElementById('reviewForm').style.display = 'block';">Laat een review achter</button>
+            <button class="speedtest-btn" onclick="document.getElementById('reviewForm').style.display = 'block';">Laat een review achter</button>
 
-            <!-- Review Form -->
             <div id="reviewForm" class="review-form" style="display:none;">
                 <h3>Geef je Review</h3>
                 <form action="#">
@@ -164,14 +173,13 @@
         </section>
     </div>
 
-    <!-- Speedtest Button and Section -->
     <div class="speedtest-container">
         <h2>Test je Internet Snelheid</h2>
-        <iframe src="https://fast.com" title="Internet Speed Test"></iframe>
+        <iframe src="https://www.speedtest.net" title="Internet Speed Test"></iframe>
     </div>
 
     <div style="text-align: center; margin-top: 20px;">
-        <button onclick="showSpeedTest()">Start Speedtest</button>
+        <button class="speedtest-btn" onclick="showSpeedTest()">Start Speedtest</button>
     </div>
 
     <footer>
@@ -180,21 +188,11 @@
 
     <script>
         function showSpeedTest() {
-            document.querySelector('.speedtest-container').style.display = 'block'; // Show speedtest
+            document.querySelector('.speedtest-container').style.display = 'block';
         }
     </script>
-    <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/67e421584169e2190c2fb55a/1in9i4gjf';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+
+    <script src="https://embed.tawk.to/67e421584169e2190c2fb55a/1in9i4gjf" async crossorigin="*"></script>
+
 </body>
 </html>
