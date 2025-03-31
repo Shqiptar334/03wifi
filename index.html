@@ -17,6 +17,13 @@
             padding: 15px;
             text-align: center;
         }
+        .slogan {
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            text-align: center;
+            margin-top: 10px;
+        }
         nav {
             display: flex;
             justify-content: center;
@@ -72,6 +79,7 @@
 <body>
     <header>
         <h1>WiFi Helpline - Eliot Fethahaj</h1>
+        <p class="slogan">Bij Wi-Fi stress, Bel ons voor succes!</p>
     </header>
     <nav>
         <a href="#home">Home</a>
@@ -101,21 +109,16 @@
         <section id="reviews" class="section">
             <h2>Klanten Reviews</h2>
             <p>Lees wat onze klanten zeggen over onze WiFi-diensten!</p>
-
             <button class="speedtest-btn" onclick="document.getElementById('reviewForm').style.display = 'block';">Laat een review achter</button>
-
             <div id="reviewForm" class="review-form" style="display:none;">
                 <h3>Geef je Review</h3>
                 <form action="#">
                     <label for="name">Naam:</label>
                     <input type="text" id="name" name="name" required>
-
                     <label for="rating">Beoordeling (1-5):</label>
                     <input type="number" id="rating" name="rating" min="1" max="5" required>
-
                     <label for="review">Review:</label>
                     <textarea id="review" name="review" rows="4" required></textarea>
-
                     <button type="submit">Verzend Review</button>
                 </form>
             </div>
@@ -128,27 +131,21 @@
             <p>Als het echt nodig is, dan kun je <a href="https://anydesk.com/nl/downloads" target="_blank">AnyDesk downloaden</a> voor directe hulp met de computer.</p>
         </section>
     </div>
-
     <div class="speedtest-container">
         <h2>Test je Internet Snelheid</h2>
         <iframe src="https://fast.com" title="Internet Speed Test"></iframe>
     </div>
-
     <div style="text-align: center; margin-top: 20px;">
         <button class="speedtest-btn" onclick="showSpeedTest()">Start Speedtest</button>
     </div>
-
     <footer>
         <p>&copy; 2025 WiFi Helpline</p>
     </footer>
-
     <script>
         function showSpeedTest() {
             document.querySelector('.speedtest-container').style.display = 'block';
         }
     </script>
-
     <script src="https://embed.tawk.to/67e421584169e2190c2fb55a/1in9i4gjf" async crossorigin="*"></script>
-
 </body>
 </html>
